@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f4f4f4;
+}
+ul li {
+  font-family: system, Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+ul li a {
+  color: black;
+}
+ul {
+  position: absolute;
+  right: 0;
+}
+.card {
+  width: 400px;
+  height: 400px;
+  background-color: #9dff0023;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  margin: auto;
+}
+.card::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #0348dfef;
+  position: absolute;
+  clip-path: circle();
+  right: -20px;
+  top: 0px;
+  z-index: -1;
+  filter: blur(60px);
+  animation: move-on 0.3s;
+}
+.card::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #03df0e;
+  position: absolute;
+  clip-path: circle();
+  left: -20px;
+  bottom: 0px;
+  z-index: -1;
+  filter: blur(60px);
+}
+.card-img-overlay {
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #0300cf;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: auto;
+}
+.icon-circle {
+  border-radius: 50%;
+  background-color: #03df5f38;
+  clip-path: circle();
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.circl-tow {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(to top, #0348dfef, white);
+  position: absolute;
+  clip-path: circle();
+  right: 56%;
+  top: -23px;
+  z-index: -1;
+  filter: blur(60px);
+}
+.circl-tow-2 {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(to top, #03df28b7, white);
+  position: absolute;
+  clip-path: circle();
+  left: -10px;
+  top: 80%;
+  z-index: -1;
+  filter: blur(60px);
+}
+.circl-tow-3 {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(to top, #0348dfef, white);
+  position: absolute;
+  clip-path: circle();
+  right: -30px;
+  top: 40%;
+  z-index: -1;
+  filter: blur(60px);
+}
+.img-products {
+  width: 100px;
+  height: 300px;
+  background-color: #f4f4f43b;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+/* ==============media================= */
+@media (max-width: 1000px) {
+  ul {
+    position: relative;
+  }
+}
+@media (max-width: 408px) and (max-height: 664px) {
+  .card {
+    width: 300px;
+    height: 300px;
+    background-color: #9dff0027;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    margin: auto;
+  }
+  .card-img-overlay {
+    width: 50%;
+    height: 50%;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #0300cf;
+    font-size: 10px;
+    font-weight: bolder;
+    margin: auto;
+  }
+  .icon-circle {
+    border-radius: 50%;
+    background-color: #03df5f38;
+    clip-path: circle();
+    padding: 100px;
+  }
+  .img-products {
+  width: 20px;
+  height: 80px;
+  background-color: #f4f4f43b;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+/* #contect-us {
+    width: 59%;
+    position: absolute;
+    top: 4094px;
+    left: 169px;
+    font-size: 10px;
+    height: 13%;
+
+} */
+}
+@media (max-width: 300px) and (max-height: 664px) {
+  .card {
+    width: 200px;
+    height: 200px;
+    background-color: #9dff0027;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    margin: auto;
+  }
+  .card-img-overlay {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #0300cf;
+    font-size: 10px;
+    font-weight: bolder;
+    margin: auto;
+  }
+  .icon-circle {
+    border-radius: 50%;
+    background-color: #03df5f38;
+    clip-path: circle();
+    padding: 100px;
+  }
+}

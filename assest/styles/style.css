@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f4f4f4;
+  perspective: 900x;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+ul li {
+  font-family: system, Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+ul li a {
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
+}
+ul {
+  position: absolute;
+  right: 0;
+}
+h1 {
+  font-weight: bolder;
+}
+.card {
+  width: 400px;
+  height: 400px;
+  background-color: #5c960023;
+  border-radius: 50%;
+  border: 1px solid white;
+  mask-border-mode:luminance ;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  margin: auto;
+}
+.card::before {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background:linear-gradient(to left top,#04297a,rgba(255, 255, 255, 0.692)); 
+  position: absolute;
+  clip-path: circle();
+  right: -20px;
+  top: 0px;
+  z-index: -1;
+  -webkit-animation: slide-bck-center 1s ease-in infinite alternate-reverse backwards;
+  animation: slide-bck-center 1s ease-in infinite alternate-reverse backwards;
+}
+.card::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background:linear-gradient(to right ,  #007a06 , rgba(255, 255, 255, 0.699));
+  position: absolute;
+  clip-path: circle();
+  left: -20px;
+  bottom: 0px;
+  z-index: -1;
+  -webkit-animation: slide-bck-center 1s ease-in infinite alternate-reverse backwards;
+  animation: slide-bck-center 1s ease-in infinite alternate-reverse backwards;
+}
+.card-img-overlay {
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: #0300cf;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: auto;
+}
+.icon-circle {
+  border-radius: 50%;
+  background-color: #5c960023;
+  clip-path: circle();
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-weight: bolder;
+}
+.circl-tow {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background:linear-gradient(to left top,#04297a,rgba(255, 255, 255, 0.692)); 
+  position: absolute;
+  clip-path: circle();
+  right: 56%;
+  top: -23px;
+  z-index: -1;
+  -webkit-animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate backwards;
+  animation: slide-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate backwards;
+}
+.circl-tow-2 {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background:linear-gradient(to right ,  #007a06 , rgba(255, 255, 255, 0.699));
+  position: absolute;
+  clip-path: circle();
+  left: -10px;
+  top: 80%;
+  z-index: -1;
+  -webkit-animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate backwards;
+  animation: slide-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate backwards;
+}
+.circl-tow-3 {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background:linear-gradient(to left top,#04297a,rgba(255, 255, 255, 0.692)); 
+  position: absolute;
+  clip-path: circle();
+  right: -30px;
+  top: 40%;
+  z-index: -1;
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate backwards;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate backwards;
+}
+.img-products {
+  width: 100px;
+  height: 262px;
+  background-color: #f4f4f43b;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+@-webkit-keyframes slide-bck-center {
+  0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+@keyframes slide-bck-center {
+  0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+@-webkit-keyframes slide-right {
+  0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+@keyframes slide-right {
+  0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+@-webkit-keyframes slide-bottom {
+  0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+@keyframes slide-bottom {
+  0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+@-webkit-keyframes slide-left {
+   0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+@keyframes slide-left {
+  0% {
+     scale: 1 1;
+  }
+  100% {
+  scale: 1.2 1.2;
+  }
+}
+/* ==============media================= */
+@media (max-width: 1000px) {
+  ul {
+    position: relative;
+  }
+}
+@media (max-width: 408px) and (max-height: 664px) {
+  .card {
+    width: 300px;
+    height: 300px;
+    background-color: #9dff0027;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    margin: auto;
+  }
+  .card-img-overlay {
+    width: 50%;
+    height: 50%;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #0300cf;
+    font-size: 10px;
+    font-weight: bolder;
+    margin: auto;
+  }
+  .icon-circle {
+    border-radius: 50%;
+    background-color: #03df5f38;
+    clip-path: circle();
+    padding: 100px;
+  }
+  .img-products {
+    width: 20px;
+    height: 80px;
+    background-color: #f4f4f43b;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  /* #contect-us {
+    width: 59%;
+    position: absolute;
+    top: 4094px;
+    left: 169px;
+    font-size: 10px;
+    height: 13%;
+
+} */
+}
+@media (max-width: 300px) and (max-height: 664px) {
+  .card {
+    width: 200px;
+    height: 200px;
+    background-color: #9dff0027;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    margin: auto;
+  }
+  .card-img-overlay {
+    width: 100%;
+    height: 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #0300cf;
+    font-size: 10px;
+    font-weight: bolder;
+    margin: auto;
+  }
+  .icon-circle {
+    border-radius: 50%;
+    background-color: #03df5f38;
+    clip-path: circle();
+    padding: 100px;
+  }
+}
